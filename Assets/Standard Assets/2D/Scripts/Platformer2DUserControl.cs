@@ -12,27 +12,6 @@ namespace UnityStandardAssets._2D
         
 
 
-		// Double Jump custom code
-		//public bool canDoubleJump = false;
-
-		// Fetch variable:
-		private PlatformerCharacter2D otherScriptToAccess;
-		private bool booleanCanDoubleJump;
-
-
-		void Start ()
-		{
-			otherScriptToAccess = GetComponent<PlatformerCharacter2D> ();
-
-			booleanCanDoubleJump = otherScriptToAccess.canDoubleJump;
-
-		}
-
-
-		//
-
-
-
 		private PlatformerCharacter2D m_Character;
         private bool m_Jump;
 
@@ -48,16 +27,6 @@ namespace UnityStandardAssets._2D
 				// Read the jump input in Update so button presses aren't missed.
 				m_Jump = CrossPlatformInputManager.GetButtonDown ("Jump"); }
 
-
-			if (booleanCanDoubleJump)
-			{
-				// Read the jump input in Update so button presses aren't missed.
-				m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-			}
-
-
-			// Stopper her
-
 		}
 
         private void FixedUpdate()
@@ -68,20 +37,6 @@ namespace UnityStandardAssets._2D
             // Pass all parameters to the character control script.
 			m_Character.Move(h, crouch, m_Jump);
             m_Jump = false;
-        }
-
-		void OnCollisionEnter2D(Collision2D other)
-		{
-			if (other.transform.tag == "MovingPlatform") {
-				transform.parent = other.transform;
-			}
-		}
-		void OnCollisionExit2D(Collision2D other)
-		{
-			if (other.transform.tag == "MovingPlatform") {
-				transform.parent = null;
-			}
-		}
-				
+        }			
     }
 }

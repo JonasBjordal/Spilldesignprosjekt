@@ -73,8 +73,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.94, z: 0}
-  m_LocalScale: {x: 1.7715329, y: 1.7715304, z: 1}
+  m_LocalPosition: {x: -27.16, y: -3.04, z: 0}
+  m_LocalScale: {x: 2.04, y: 1.7715304, z: 1}
   m_Children:
   - {fileID: 400000}
   - {fileID: 400004}
@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.7859145
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -122,12 +122,12 @@ CircleCollider2D:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 696ec50b1f7947f4dba92f70827498d3, type: 2}
-  m_IsTrigger: 0
+  m_Material: {fileID: 6200000, guid: 8d4282e91e1bf904b89138c929f85147, type: 2}
+  m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.45}
+  m_Offset: {x: 0, y: -0.46}
   serializedVersion: 2
-  m_Radius: 0.16
+  m_Radius: 0.13
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -139,9 +139,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 696ec50b1f7947f4dba92f70827498d3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.07}
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.68}
+  m_Size: {x: 0.36, y: 1.1}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -181,16 +181,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxSpeed: 10
-  m_JumpForce: 800
-  doubleJumpForce: 600
-  m_CrouchSpeed: 0.25
+  m_MoveSpeed: 8
+  m_JumpForce: 16
+  m_fallMultiplier: 2
+  m_lowJumpMultiplier: 8
+  m_doubleJumpForce: 14
+  m_CrouchSpeed: 0.36
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967039
   canDoubleJump: 1
   delayBeforeDoubleJump: 0.05
+  jump1PrefabOffset: 0
+  jump2PrefabOffset: -0.7
+  jump1Prefab: {fileID: 1643883400601868, guid: bc3686583b4b22842ab26b478eed19d4,
+    type: 2}
+  jump2Prefab: {fileID: 1225058945597994, guid: 408343f3389fcda40a1c75de472985ed,
+    type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
