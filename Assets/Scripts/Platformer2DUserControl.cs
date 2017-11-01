@@ -2,8 +2,6 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-namespace UnityStandardAssets._2D
-{
     [RequireComponent(typeof (PlatformerCharacter2D))]
 
 
@@ -39,4 +37,3 @@ namespace UnityStandardAssets._2D
             m_Jump = false;
         }			
     }
-}

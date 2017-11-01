@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+
 public class UIAppear : MonoBehaviour 
 {
 	private GameObject hidey;
@@ -7,6 +8,8 @@ public class UIAppear : MonoBehaviour
 	void Start() {
 		hidey = GameObject.Find ("hidey_Goal");
 		hidey.gameObject.SetActive (false);
+
+
 	}
 
 	void OnTriggerEnter2D(Collider2D other) 
@@ -14,6 +17,7 @@ public class UIAppear : MonoBehaviour
 		//Telling game to actiavte boolean
 		if(other.gameObject.tag == "Player") 
 		{
+			countdownTimer.goal = true; 
 			hidey.gameObject.SetActive (true);
 		}
 	}
@@ -22,6 +26,7 @@ public class UIAppear : MonoBehaviour
 	{
 		if (other.CompareTag ("Player")) {
 			hidey.gameObject.SetActive (false);
+
 		}
 	}
 }

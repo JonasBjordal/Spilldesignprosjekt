@@ -24,6 +24,6 @@ C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\Temp\bin\Debug\UnityEngine.P
 C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\Temp\bin\Debug\UnityEngine.Analytics.xml
 C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\Temp\bin\Debug\UnityEngine.VR.xml
+C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\obj\Debug\Assembly-CSharp-firstpass.pdb
-C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
