@@ -30,7 +30,9 @@ using UnityStandardAssets.CrossPlatformInput;
         private void FixedUpdate()
         {
             // Read the inputs.
-            bool crouch = Input.GetKey(KeyCode.LeftControl);
+			bool crouch = Input.GetKey(KeyCode.DownArrow);
+			//crouch = Input.GetKey(KeyCode.DownArrow);
+			
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             // Pass all parameters to the character control script.
 			m_Character.Move(h, crouch, m_Jump);

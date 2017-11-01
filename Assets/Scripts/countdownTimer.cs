@@ -27,6 +27,7 @@ public class countdownTimer : MonoBehaviour {
 				timerIsActive = false;
 			} else if (timeRemaining > 0 && goal) {
 				timerText.text = "Grattis, mann";
+				timerIsActive = false;
 			}
 				
 
