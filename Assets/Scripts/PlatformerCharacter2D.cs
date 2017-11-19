@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PlatformerCharacter2D : MonoBehaviour
 {
-	[SerializeField] private float m_MoveSpeed = 15f;
+	[SerializeField] private float m_MoveSpeed = 6f;
 
-    [SerializeField] private float m_JumpForce = 8f;                  // Amount of force added when the player jumps.
+	[SerializeField] private float m_RunSpeedMultiplier = 2f;
+
+	[SerializeField] private float m_SpeedLimit = 10f;
+
+	[SerializeField] private float slideSpeed = 4f;
+	[SerializeField] private float slideFriction = 1.6f;
+
+	[SerializeField] private float m_AirMovement = 15f;
+
+    [SerializeField] private float m_JumpForce = 16f;                  // Amount of force added when the player jumps.
     
-	[SerializeField] private float m_fallMultiplier = 2.5f;
-	[SerializeField] private float m_lowJumpMultiplier = 2f;
+	[SerializeField] private float m_fallMultiplier = 2f;
+	[SerializeField] private float m_lowJumpMultiplier = 8f;
 
 
-	[SerializeField] private float m_doubleJumpForce = 600f;
+	[SerializeField] private float m_doubleJumpForce = 14f;
 
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
     [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
@@ -24,10 +33,11 @@ public class PlatformerCharacter2D : MonoBehaviour
 	public bool m_inWater = false;
     
 
-	public bool canDoubleJump = false;	// Double jump
+	private bool canDoubleJump = false;	// Double jump
 
 	private bool jumpSpent = false;
 
+	private bool sliding = false;
 
 	public float delayBeforeDoubleJump = .05f; // Double jump
 
@@ -97,7 +107,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 
 
 
-    public void Move(float move, bool crouch, bool jump)
+    public void Move(float move, bool crouch, bool jump, bool run)
     {
 
         // If crouching, check to see if the character can stand up
@@ -107,54 +117,122 @@ public class PlatformerCharacter2D : MonoBehaviour
             if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
             {
                 crouch = true;
+				jump = false;
+				canDoubleJump = false;
             }
         }
+		// No jump in tight passages
+		if (crouch && m_Anim.GetBool("Crouch") && Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
+		{
+				crouch = true;
+				jump = false;
+				canDoubleJump = false;
+		}
 
         // Set whether or not the character is crouching in the animator
         m_Anim.SetBool("Crouch", crouch);
 
+		m_Anim.SetBool ("Sliding", sliding);
+
+		if (Mathf.Abs (m_Rigidbody2D.velocity.x) > 0.5f && !crouch) {
+			m_Anim.SetBool ("Run", run);
+		} else {
+			m_Anim.SetBool ("Run", false);
+		}
+		if (!crouch) {
+			slideSpeed = 1f;
+			sliding = false;
+		}
+
         //only control the player if grounded or airControl is turned on
-        if (m_Grounded || m_AirControl)
-        {
-            // Reduce the speed if crouching by the crouchSpeed multiplier
-            move = (crouch ? move*m_CrouchSpeed : move);
+		if (m_Grounded /*| m_AirControl*/) {
+			// Reduce the speed if crouching by the crouchSpeed multiplier
 
-            // The Speed animator parameter is set to the absolute value of the horizontal input.
-            m_Anim.SetFloat("Speed", Mathf.Abs(move));
+			//if running
+			if (m_Grounded && Mathf.Abs (m_Rigidbody2D.velocity.x) > m_SpeedLimit - 0.5f) {
+				if (crouch) {
+					sliding = true;
+					print ("sliding" + sliding);
+				} else {
+					sliding = false;
+				}
+			}
+
+			//if sliding and not still.
+			if (sliding) {
+				print ("ADD SLIDE ANIMATION + SMOKE PREFAB");
+				if (m_Rigidbody2D.velocity.x > 0.05f) {
+					slideSpeed -= Time.deltaTime * slideFriction;
+					move = (crouch ? slideSpeed : move);
+				}
+				if (m_Rigidbody2D.velocity.x < -0.05f) {
+					slideSpeed -= Time.deltaTime * slideFriction;
+					move = (crouch ? -slideSpeed : move);
+				}
+				if (slideSpeed < 1f) {
+					sliding = false;
+				}
+			}
 
 
-			m_Rigidbody2D.velocity = new Vector2 (move * m_MoveSpeed, m_Rigidbody2D.velocity.y);
+			if (m_Grounded) {
+//				if (crouch && !run) {
+//					move *= m_CrouchSpeed
+				move = ((crouch && !run) ? move * m_CrouchSpeed : move);
+				move = ((m_Anim.GetBool("Run")) ? move * m_RunSpeedMultiplier  : move);
+			}
+
+			m_Rigidbody2D.velocity = new Vector2 ((move * m_MoveSpeed), m_Rigidbody2D.velocity.y);
 
 
-            // If the input is moving the player right and the player is facing left...
-            if (move > 0 && !m_FacingRight)
-            {
-                // ... flip the player.
-                Flip();
-            }
+
+			// The Speed animator parameter is set to the absolute value of the horizontal input.
+			m_Anim.SetFloat ("Speed", Mathf.Abs (move));
+
+		
+
+
+			// If the input is moving the player right and the player is facing left...
+			if (move > 0 && !m_FacingRight) {
+				// ... flip the player.
+				Flip ();
+			}
                 // Otherwise if the input is moving the player left and the player is facing right...
-            else if (move < 0 && m_FacingRight)
-            {
-                // ... flip the player.
-                Flip();
-            }
-        }
-        // If the player should jump...
+            else if (move < 0 && m_FacingRight) {
+				// ... flip the player.
+				Flip ();
+			}
+		} else { // Air Control:
+			if (move != 0) {
+				m_Rigidbody2D.AddForce (Vector2.right * m_AirMovement * move);
+				if (Mathf.Abs(m_Rigidbody2D.velocity.x) > m_SpeedLimit) { // Aerial Speed Limit
+					if (m_Rigidbody2D.velocity.x > 0) {
+						m_Rigidbody2D.velocity = new Vector2 ((m_SpeedLimit), m_Rigidbody2D.velocity.y);
+					} else if (m_Rigidbody2D.velocity.x < 0) {
+						m_Rigidbody2D.velocity = new Vector2 ((-m_SpeedLimit), m_Rigidbody2D.velocity.y);
+					}
+				}
+			}
+		}
+
+        // Player jump:
 		if(jump) {
 			if (m_Grounded && m_Anim.GetBool ("Ground")) {
 				// Add a vertical force to the player.
 				m_Grounded = false;
 				canDoubleJump = false;
 				m_Anim.SetBool ("Ground", false);
-				m_Rigidbody2D.velocity = Vector2.up * m_JumpForce;
+				m_Rigidbody2D.AddForce (transform.up * m_JumpForce);
 				instantiateJump1PrefabPos (new Vector3 (transform.position.x, transform.position.y + jump1PrefabOffset, transform.position.z));
 			
 	
 
 			} else if (canDoubleJump) {
 				canDoubleJump = false;
-				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, 0f);
-				m_Rigidbody2D.velocity = Vector2.up * m_doubleJumpForce;
+				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x * 0.7f, 0f);
+				//m_Rigidbody2D.velocity = Vector2.up * m_doubleJumpForce;
+				m_Rigidbody2D.AddForce(Vector2.up * 500);
+
 				instantiateJump2PrefabPos (new Vector3 (transform.position.x, transform.position.y + jump2PrefabOffset, transform.position.z));
 			}
 		}

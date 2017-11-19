@@ -9,6 +9,7 @@ TagManager:
   - MovingPlatform
   - Water
   - Checkpoint
+  - Stars
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - Player
   - Background
-  - 
+  - Sky
   - 
   - 
   - 
@@ -43,8 +44,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: SkyPanel
+    uniqueID: 4289864715
+    locked: 0
+  - name: Sky
+    uniqueID: 1707971089
+    locked: 0
   - name: Background
     uniqueID: 2475138923
+    locked: 0
+  - name: Midground
+    uniqueID: 156057737
     locked: 0
   - name: Default
     uniqueID: 0
@@ -54,4 +64,7 @@ TagManager:
     locked: 0
   - name: Forground
     uniqueID: 1320844943
+    locked: 0
+  - name: UI
+    uniqueID: 2970361869
     locked: 0

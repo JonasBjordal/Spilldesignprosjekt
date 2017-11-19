@@ -30,7 +30,7 @@ public class Parallaxing : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 
 			//for each background
 			for (int i = 0; i < backgrounds.Length; i++) {

@@ -18,8 +18,10 @@ public class Player : MonoBehaviour {
 	public int fallBoundary = -20;
 
 
-	void Start()
+
+	void Awake()
 	{
+		countdownTimer.player = this;
 		//PlatformerCharacter2D playerScript = Player.GetComponent<PlatformerCharacter2D> ();
 
 	}
@@ -29,7 +31,7 @@ public class Player : MonoBehaviour {
 
 	void Update () {
 		if (transform.position.y <= fallBoundary) {
-			DamagePlayer (999999999);
+			GameMaster.KillPlayer(this);
 		}
 		//if (playerScript.goal) {
 		//	Invoke (autoKill, delayGoalRespawn);
@@ -37,15 +39,9 @@ public class Player : MonoBehaviour {
 		
 	}
 
-	public void autoKill() 
-	{
-		DamagePlayer (999999999);
-	}
-
-
 	public void DamagePlayer (int damage) {
 		playerStats.Health -= damage;
-		if (playerStats.Health <= 0) {
+		if (playerStats.Health <= 0 || GameMaster.dead == true) {
 			GameMaster.KillPlayer(this);
 		}
 

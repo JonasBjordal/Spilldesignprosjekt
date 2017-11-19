@@ -27,3 +27,6 @@ C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\Temp\bin\Debug\UnityEngine.V
 C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\obj\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\Temp\bin\Debug\2D Sky FREE.dll
+C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\Temp\bin\Debug\GETween.dll
+C:\Users\Jonas\Documents\Unicum\Spilldesignprosjekt\Temp\bin\Debug\GUIAnimatorFREE.dll

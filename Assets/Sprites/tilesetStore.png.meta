@@ -1,0 +1,706 @@
+fileFormatVersion: 2
+guid: a4b09be9441c4f04d9f04cf68a58df8a
+timeCreated: 1510927260
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tilesetStore_0
+    21300002: tilesetStore_1
+    21300004: tilesetStore_2
+    21300006: tilesetStore_3
+    21300008: tilesetStore_4
+    21300010: tilesetStore_5
+    21300012: tilesetStore_6
+    21300014: tilesetStore_7
+    21300016: tilesetStore_8
+    21300018: tilesetStore_9
+    21300020: tilesetStore_10
+    21300022: tilesetStore_11
+    21300024: tilesetStore_12
+    21300026: tilesetStore_13
+    21300028: tilesetStore_14
+    21300030: tilesetStore_15
+    21300032: tilesetStore_16
+    21300034: tilesetStore_17
+    21300036: tilesetStore_18
+    21300038: tilesetStore_19
+    21300040: tilesetStore_20
+    21300042: tilesetStore_21
+    21300044: tilesetStore_22
+    21300046: tilesetStore_23
+    21300048: tilesetStore_24
+    21300050: tilesetStore_25
+    21300052: tilesetStore_26
+    21300054: tilesetStore_27
+    21300056: tilesetStore_28
+    21300058: tilesetStore_29
+    21300060: tilesetStore_30
+    21300062: tilesetStore_31
+    21300064: tilesetStore_32
+    21300066: tilesetStore_33
+    21300068: tilesetStore_34
+    21300070: tilesetStore_35
+    21300072: tilesetStore_36
+    21300074: tilesetStore_37
+    21300076: tilesetStore_38
+    21300078: tilesetStore_39
+    21300080: tilesetStore_40
+    21300082: tilesetStore_41
+    21300084: tilesetStore_42
+    21300086: tilesetStore_43
+    21300088: tilesetStore_44
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tilesetStore_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2999
+        width: 420
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_1
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2998
+        width: 421
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_2
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 3112
+        width: 423
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_3
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 2998
+        width: 422
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_4
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 2998
+        width: 423
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_5
+      rect:
+        serializedVersion: 2
+        x: 2498
+        y: 2998
+        width: 421
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_6
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 2998
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2499
+        width: 420
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_8
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2499
+        width: 421
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_9
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 2499
+        width: 423
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_10
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 2609
+        width: 422
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_11
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 2499
+        width: 423
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_12
+      rect:
+        serializedVersion: 2
+        x: 2498
+        y: 2499
+        width: 421
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_13
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 2499
+        width: 420
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1999
+        width: 420
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_15
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1999
+        width: 421
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_16
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 1999
+        width: 423
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_17
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 1999
+        width: 421
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_18
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 1999
+        width: 423
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_19
+      rect:
+        serializedVersion: 2
+        x: 2498
+        y: 1999
+        width: 421
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_20
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 1999
+        width: 420
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_22
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1500
+        width: 421
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_23
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 1500
+        width: 423
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_24
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 1500
+        width: 421
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_25
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 1500
+        width: 423
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_26
+      rect:
+        serializedVersion: 2
+        x: 2498
+        y: 1500
+        width: 421
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_27
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 1500
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 999
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_29
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 999
+        width: 421
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_30
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 1001
+        width: 423
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_31
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 999
+        width: 421
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_32
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 999
+        width: 423
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_33
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 1001
+        width: 422
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_34
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 999
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 498
+        width: 420
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_36
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 498
+        width: 421
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_37
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 498
+        width: 421
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_38
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 498
+        width: 422
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_39
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 498
+        width: 423
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_40
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 498
+        width: 422
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_41
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 502
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_43
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0
+        width: 421
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilesetStore_44
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 0
+        width: 421
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
