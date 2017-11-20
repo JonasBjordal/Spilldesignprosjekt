@@ -27,6 +27,7 @@ public class AmbientLight : MonoBehaviour
 
 
   public Color StarColor;
+  public Color colorFix;
 
 	// Use this for initialization
 	void Start ()
@@ -62,9 +63,12 @@ public class AmbientLight : MonoBehaviour
 
     sky.SetColor ("_TopColor", topSky.Evaluate (t));
     sky.SetColor ("_BottomColor", botSky.Evaluate (t));
-		//print( stars.Evaluate (t));
-		//Color32 StarColor = new Color (stars.Evaluate (t));
-		//StarSkySR.color = new Color (StarColor); //stars.Evaluate (t)
+
+	StarSkySR.color = stars.Evaluate (t); //stars.Evaluate (t)
+
+
+
+
 
     skyPlane.localEulerAngles = -Vector3.forward * rotationCurve.Evaluate (t);
 

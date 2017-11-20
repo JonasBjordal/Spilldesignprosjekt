@@ -46,6 +46,9 @@ public class PlatformerCharacter2D : MonoBehaviour
 	public GameObject jump1Prefab; 
 	public GameObject jump2Prefab;
 
+	public GameObject splashPrefab;
+	public GameObject splashOutPrefab; 
+	public float splashPrefabYOffset;
 
 
 
@@ -104,9 +107,15 @@ public class PlatformerCharacter2D : MonoBehaviour
 	private void instantiateJump2PrefabPos(Vector2 pos) {
 		GameObject.Instantiate (jump2Prefab, pos, Quaternion.identity);
 	}
+	// Splashing particles:
+	private void instantiateSplashPrefabPos(Vector2 pos) {
+		GameObject.Instantiate (splashPrefab, pos, Quaternion.identity);
+	}
+	private void instantiateSplashOutPrefabPos(Vector2 pos) {
+		GameObject.Instantiate (splashOutPrefab, pos, Quaternion.identity);
+	}
 
-
-
+	// Movement:
     public void Move(float move, bool crouch, bool jump, bool run)
     {
 
@@ -223,8 +232,9 @@ public class PlatformerCharacter2D : MonoBehaviour
 				canDoubleJump = false;
 				m_Anim.SetBool ("Ground", false);
 				m_Rigidbody2D.AddForce (transform.up * m_JumpForce);
-				instantiateJump1PrefabPos (new Vector3 (transform.position.x, transform.position.y + jump1PrefabOffset, transform.position.z));
-			
+				if (!m_inWater) {
+					instantiateJump1PrefabPos (new Vector3 (transform.position.x, transform.position.y + jump1PrefabOffset, transform.position.z));
+				}
 	
 
 			} else if (canDoubleJump) {
@@ -232,8 +242,9 @@ public class PlatformerCharacter2D : MonoBehaviour
 				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x * 0.7f, 0f);
 				//m_Rigidbody2D.velocity = Vector2.up * m_doubleJumpForce;
 				m_Rigidbody2D.AddForce(Vector2.up * 500);
-
-				instantiateJump2PrefabPos (new Vector3 (transform.position.x, transform.position.y + jump2PrefabOffset, transform.position.z));
+				if (!m_inWater) {
+					instantiateJump2PrefabPos (new Vector3 (transform.position.x, transform.position.y + jump2PrefabOffset, transform.position.z));
+				}
 			}
 		}
 		if (!m_inWater) {
@@ -274,7 +285,10 @@ public class PlatformerCharacter2D : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Water") {
 			m_inWater = true;
-			print ("You're in the water!");
+			print ("You're in the water! Add sound");
+
+			instantiateSplashPrefabPos (new Vector3 (transform.position.x, transform.position.y + splashPrefabYOffset, transform.position.z));
+		
 		}
 
 		// Inkrementere spawnPoint ved passering av checkpoint:
@@ -294,7 +308,10 @@ public class PlatformerCharacter2D : MonoBehaviour
 		if (other.gameObject.tag == "Water")
 		{
 			m_inWater = false;
-			print("You're out of the water!");
+			print("You're out of the water! Add sound");
+
+			instantiateSplashOutPrefabPos (new Vector3 (transform.position.x, transform.position.y + splashPrefabYOffset, transform.position.z));
+
 		}
 	}
 

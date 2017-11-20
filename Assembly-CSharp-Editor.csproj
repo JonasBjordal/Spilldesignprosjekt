@@ -48,6 +48,13 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\SortingLayerEditor.cs" />
      <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
+     <Compile Include="Assets\Spriter2UnityDX\Editor\AnimationBuilder.cs" />
+     <Compile Include="Assets\Spriter2UnityDX\Editor\CustomEditors.cs" />
+     <Compile Include="Assets\Spriter2UnityDX\Editor\PrefabBuilder.cs" />
+     <Compile Include="Assets\Spriter2UnityDX\Editor\S2USettings.cs" />
+     <Compile Include="Assets\Spriter2UnityDX\Editor\ScmlImportOptions.cs" />
+     <Compile Include="Assets\Spriter2UnityDX\Editor\ScmlPostProcessor.cs" />
+     <Compile Include="Assets\Spriter2UnityDX\Editor\ScmlSupport.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -207,12 +214,6 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Graphs">
- <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.WindowsStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
- </Reference>
  <Reference Include="2D Sky FREE">
  <HintPath>C:/Users/Jonas/Documents/Unicum/Spilldesignprosjekt/Assets/2D Sky FREE/Demo/Scripts/2D Sky FREE.dll</HintPath>
  </Reference>
@@ -221,6 +222,12 @@
  </Reference>
  <Reference Include="GUIAnimatorFREE">
  <HintPath>C:/Users/Jonas/Documents/Unicum/Spilldesignprosjekt/Assets/GUI Animator/GUI Animator FREE/Plugins/GUIAnimatorFREE.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

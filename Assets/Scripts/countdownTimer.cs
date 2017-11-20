@@ -7,6 +7,7 @@ public class countdownTimer : MonoBehaviour {
 
 	public Text timerText;
 	public static float timeRemaining = 200f;
+	public static float timeInitial;
 	private bool timerIsActive = true;
 	public static bool goal = false;
 	public static bool dead = false;
@@ -19,6 +20,8 @@ public class countdownTimer : MonoBehaviour {
 		goal = false;
 		timerIsActive = true;
 		timeRemaining = 200f;
+		timeInitial = timeRemaining;
+
 	
 		timerText = GetComponent<Text> ();
 	}
@@ -40,7 +43,8 @@ public class countdownTimer : MonoBehaviour {
 				timerIsActive = false;
 			}
 			else if (timeRemaining > 0f && goal) {
-				timerText.text = "Grattis, mann";
+				//timerText.text = "You made it!";
+				timerText.text = "You made it! You spent " + (timeInitial - timeRemaining).ToString ("f1") + " seconds.";
 				timerIsActive = false;
 			}
 				

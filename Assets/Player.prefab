@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.07, y: -3.06, z: 0}
+  m_LocalPosition: {x: 243.9, y: 0.7, z: 0}
   m_LocalScale: {x: 2.04, y: 1.7715304, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -204,6 +204,11 @@ MonoBehaviour:
     type: 2}
   jump2Prefab: {fileID: 1225058945597994, guid: 408343f3389fcda40a1c75de472985ed,
     type: 2}
+  splashPrefab: {fileID: 1383133624928404, guid: 0e4122ee7c7e3ad4bad4d4d8c678d0ad,
+    type: 2}
+  splashOutPrefab: {fileID: 1273974375241848, guid: 44d178decdb0d2848b0ec2241126a243,
+    type: 2}
+  splashPrefabYOffset: -0.76
   goal: 0
 --- !u!212 &21200000
 SpriteRenderer:

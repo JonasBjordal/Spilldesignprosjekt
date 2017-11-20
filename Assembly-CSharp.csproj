@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CollideFix.cs" />
      <Compile Include="Assets\GE Common Assets\GE Orbit Camera\Scripts\GE_OrbitCamera.cs" />
      <Compile Include="Assets\GE Common Assets\GE Orbit Camera\Scripts\GE_OrbitCameraUI.cs" />
      <Compile Include="Assets\GE Common Assets\GE Toggle Full Screen\Scripts\GE_ToggleFullScreenUI.cs" />
@@ -99,6 +100,9 @@
      <Compile Include="Assets\Scripts\Tiling.cs" />
      <Compile Include="Assets\Scripts\UIAppear.cs" />
      <Compile Include="Assets\Scripts\countdownTimer.cs" />
+     <Compile Include="Assets\Spriter2UnityDX\Runtime\EntityRenderer.cs" />
+     <Compile Include="Assets\Spriter2UnityDX\Runtime\SortingOrderUpdater.cs" />
+     <Compile Include="Assets\Spriter2UnityDX\Runtime\TextureController.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
