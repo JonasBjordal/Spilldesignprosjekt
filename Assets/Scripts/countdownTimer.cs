@@ -11,8 +11,14 @@ public class countdownTimer : MonoBehaviour {
 	private bool timerIsActive = true;
 	public static bool goal = false;
 	public static bool dead = false;
+	public static string timeSpentString;
 
 	public static Player player;
+
+	[SerializeField]
+	private GameObject GoalUI;
+	[SerializeField]
+	private GameObject OldTimer;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +36,7 @@ public class countdownTimer : MonoBehaviour {
 	void Update () {
 		if (timerIsActive) {
 			timeRemaining -= Time.deltaTime;
-			timerText.text = "TIME: " + timeRemaining.ToString ("f1");
+			timerText.text = "Time: " + timeRemaining.ToString ("f0");
 			//print (timeRemaining);
 			if (timeRemaining < 0.01f) {
 				timeRemaining = 0f;
@@ -43,9 +49,13 @@ public class countdownTimer : MonoBehaviour {
 				timerIsActive = false;
 			}
 			else if (timeRemaining > 0f && goal) {
-				//timerText.text = "You made it!";
-				timerText.text = "You made it! You spent " + (timeInitial - timeRemaining).ToString ("f1") + " seconds.";
 				timerIsActive = false;
+				timeSpentString = (timeInitial - timeRemaining).ToString ("f0");
+				timerText.text = " Your time: " + timeSpentString + " seconds" + "\r\n\r\n" + "But can you do it faster?";
+
+				GoalUI.SetActive (true);
+
+				OldTimer.SetActive (false);
 			}
 				
 

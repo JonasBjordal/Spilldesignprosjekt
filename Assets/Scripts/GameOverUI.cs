@@ -15,13 +15,8 @@ public class GameOverUI : MonoBehaviour {
 		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
 	}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public void newGameBtn(string newGameLevel){
+		SceneManager.LoadScene (newGameLevel);
+
 	}
 }

@@ -12,7 +12,8 @@ public class UIAppear : MonoBehaviour
 		//Telling game to actiavte boolean
 		if(other.gameObject.tag == "Player") 
 		{
-			countdownTimer.goal = true; 
+			countdownTimer.goal = true;
+
 		}
 	}
 

@@ -23,8 +23,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 
 	[SerializeField] private float m_doubleJumpForce = 14f;
 
-	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
-    [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
+	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%                // Whether or not a player can steer while jumping;
     [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
     private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
@@ -57,7 +56,6 @@ public class PlatformerCharacter2D : MonoBehaviour
     private Animator m_Anim;            // Reference to the player's animator component.
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-
 	public bool goal = false;
 
     private void Awake()
@@ -114,7 +112,6 @@ public class PlatformerCharacter2D : MonoBehaviour
 	private void instantiateSplashOutPrefabPos(Vector2 pos) {
 		GameObject.Instantiate (splashOutPrefab, pos, Quaternion.identity);
 	}
-
 	// Movement:
     public void Move(float move, bool crouch, bool jump, bool run)
     {
@@ -142,6 +139,11 @@ public class PlatformerCharacter2D : MonoBehaviour
         m_Anim.SetBool("Crouch", crouch);
 
 		m_Anim.SetBool ("Sliding", sliding);
+
+		m_Anim.SetBool ("Water", m_inWater);
+
+
+
 
 		if (Mathf.Abs (m_Rigidbody2D.velocity.x) > 0.5f && !crouch) {
 			m_Anim.SetBool ("Run", run);
@@ -234,6 +236,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 				m_Rigidbody2D.AddForce (transform.up * m_JumpForce);
 				if (!m_inWater) {
 					instantiateJump1PrefabPos (new Vector3 (transform.position.x, transform.position.y + jump1PrefabOffset, transform.position.z));
+				
 				}
 	
 
@@ -244,6 +247,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 				m_Rigidbody2D.AddForce(Vector2.up * 500);
 				if (!m_inWater) {
 					instantiateJump2PrefabPos (new Vector3 (transform.position.x, transform.position.y + jump2PrefabOffset, transform.position.z));
+
 				}
 			}
 		}
@@ -286,6 +290,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 		if (other.gameObject.tag == "Water") {
 			m_inWater = true;
 			print ("You're in the water! Add sound");
+			m_Anim.SetTrigger ("Swimming");
 
 			instantiateSplashPrefabPos (new Vector3 (transform.position.x, transform.position.y + splashPrefabYOffset, transform.position.z));
 		
@@ -300,6 +305,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 		} else if (other.gameObject.tag == "GoalTrigger") {
 			//GameMaster.gm.counter = false;
 			Debug.Log ("Du er i mål!");
+			m_Anim.SetTrigger ("Goal");
 			goal = true;
 		}
 	}
@@ -308,6 +314,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 		if (other.gameObject.tag == "Water")
 		{
 			m_inWater = false;
+			m_Anim.SetTrigger ("Swimming");
 			print("You're out of the water! Add sound");
 
 			instantiateSplashOutPrefabPos (new Vector3 (transform.position.x, transform.position.y + splashPrefabYOffset, transform.position.z));
